@@ -13,6 +13,7 @@ target 'Xccelerator_New' do
   pod "FirebaseFirestoreSwift"
   pod 'GRDB.swift'
   pod 'Resolver'
+  pod 'FSCalendar'
   post_install do |installer|
       installer.pods_project.targets.select { |target| target.name == "GRDB.swift" }.each do |target|
         target.build_configurations.each do |config|

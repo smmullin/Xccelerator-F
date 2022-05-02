@@ -14,6 +14,9 @@ class CarInfoViewController: UIViewController {
     @IBOutlet weak var colorInfoLabel: UILabel!
     @IBOutlet weak var makeInfoLabel: UILabel!
     @IBOutlet weak var deletePostButton: UIButton!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    
     
     @IBAction func deletePost(_ sender: Any) {
         APIFunctions.functions.deletePost(id: carInfo!.id)
@@ -26,6 +29,8 @@ class CarInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         makeInfoLabel.text = carInfo?.make
         colorInfoLabel.text = carInfo?.color
+        startDateLabel.text = carInfo?.startDate
+        endDateLabel.text = carInfo?.endDate
     }
     
     /*

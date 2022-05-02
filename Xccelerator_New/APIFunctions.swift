@@ -7,11 +7,14 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 struct carPost: Identifiable {
     var id: String
     var make: String
     var color: String
+    var startDate: String
+    var endDate: String
 //    var longitude: Double
 //    var latitude: Double
 }
@@ -23,8 +26,8 @@ class APIFunctions {
     var delegate: DataDelegate?
     var carArray: [carPost] = []
     
-    func savePost(make: String, color: String){
-        let dataToSave : [String: String] = ["make": make, "color": color]
+    func savePost(make: String, color: String, startDate: String, endDate: String){
+        let dataToSave : [String: String] = ["make": make, "color": color, "startDate": startDate, "endDate": endDate]
         ref = Firestore.firestore().collection("Postings").addDocument(data: dataToSave) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -41,7 +44,7 @@ class APIFunctions {
             } else {
                 self.carArray = []
                 for document in querySnapshot!.documents {
-                    let post = carPost(id: document.documentID, make: document.data()["make"] as! String, color: document.data()["color"] as! String)
+                    let post = carPost(id: document.documentID, make: document.data()["make"] as! String, color: document.data()["color"] as! String, startDate: document.data()["startDate"] as! String, endDate: document.data()["endDate"] as! String)
                     //print("\(document.documentID) => \(document.data())")
                     self.carArray.append(post)
                 }//create an instance of car post and add it that way
