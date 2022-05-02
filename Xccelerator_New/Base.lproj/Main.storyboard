@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,6 +48,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="yE4-YY-Lxo"/>
+                    <connections>
+                        <outlet property="loginButton" destination="TkF-lr-AfI" id="Pds-u5-HhJ"/>
+                        <outlet property="signupButton" destination="ZhS-HP-nVC" id="Q4y-uw-F9r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPR-sY-XXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,21 +77,15 @@
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLD-p1-GEQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLD-p1-GEQ">
                                 <rect key="frame" x="103" y="687" width="207" height="31"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="S4a-lq-BvG" kind="show" id="18G-KQ-HcL"/>
+                                    <action selector="signupTapped:" destination="a0E-Mw-zRb" eventType="touchUpInside" id="XiY-ue-q6O"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an account already? Login " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjl-em-Oxf">
-                                <rect key="frame" x="84" y="752.5" width="246" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="H9l-UF-liD">
                                 <rect key="frame" x="40" y="296.5" width="334" height="196"/>
                                 <subviews>
@@ -123,6 +122,12 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgi-yO-ctG">
+                                <rect key="frame" x="103" y="621" width="233" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Have an account already? Login "/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jyi-gN-Z5Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,16 +137,21 @@
                             <constraint firstItem="H9l-UF-liD" firstAttribute="top" secondItem="AK7-qG-kVh" secondAttribute="bottom" constant="40" id="FaW-t5-Vpk"/>
                             <constraint firstItem="AK7-qG-kVh" firstAttribute="top" secondItem="W1q-Hr-da7" secondAttribute="bottom" constant="23" id="J5q-0J-1wi"/>
                             <constraint firstItem="AK7-qG-kVh" firstAttribute="trailing" secondItem="fLD-p1-GEQ" secondAttribute="trailing" id="JbX-dL-awo"/>
-                            <constraint firstItem="Mjl-em-Oxf" firstAttribute="top" secondItem="fLD-p1-GEQ" secondAttribute="bottom" constant="34" id="Nc5-Pf-jzq"/>
-                            <constraint firstItem="AK7-qG-kVh" firstAttribute="centerX" secondItem="Mjl-em-Oxf" secondAttribute="centerX" id="PU6-1v-sRw"/>
                             <constraint firstItem="AK7-qG-kVh" firstAttribute="centerX" secondItem="W1q-Hr-da7" secondAttribute="centerX" id="RxO-ca-srH"/>
                             <constraint firstItem="H9l-UF-liD" firstAttribute="leading" secondItem="jyi-gN-Z5Z" secondAttribute="leading" constant="40" id="eCc-La-dfM"/>
                             <constraint firstItem="AK7-qG-kVh" firstAttribute="top" secondItem="Fo1-Eo-8qG" secondAttribute="top" constant="236" id="efh-nr-Erm"/>
-                            <constraint firstItem="jyi-gN-Z5Z" firstAttribute="bottom" secondItem="Mjl-em-Oxf" secondAttribute="bottom" constant="89" id="fEQ-9P-G2c"/>
                             <constraint firstItem="jyi-gN-Z5Z" firstAttribute="trailing" secondItem="H9l-UF-liD" secondAttribute="trailing" constant="40" id="jBH-Yj-SsX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oqz-FU-CZY"/>
+                    <connections>
+                        <outlet property="emailTexrtField" destination="uMs-iF-uEF" id="9Tq-uD-fbZ"/>
+                        <outlet property="errorLabel" destination="9Wa-DB-96I" id="8op-XO-Z1r"/>
+                        <outlet property="firstNameTextField" destination="bvQ-zW-dRz" id="vS3-lZ-4xH"/>
+                        <outlet property="lastNameTextField" destination="QDG-ah-NI5" id="Idp-YN-129"/>
+                        <outlet property="passwordTextField" destination="lX2-5U-HxO" id="Oo6-7n-M0p"/>
+                        <outlet property="signupButton" destination="fLD-p1-GEQ" id="UF8-Vh-kY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGH-WO-Yym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,6 +186,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login "/>
                                 <connections>
+                                    <action selector="loginTapped:" destination="S4a-lq-BvG" eventType="touchUpInside" id="s97-lJ-l1B"/>
                                     <segue destination="Vii-7f-wca" kind="show" id="dia-r6-Yf9"/>
                                 </connections>
                             </button>
@@ -183,7 +194,7 @@
                                 <rect key="frame" x="86" y="743" width="243" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0x-L7-Hki">
@@ -205,6 +216,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Drd-5M-jpL"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="U0x-L7-Hki" id="950-ed-fOa"/>
+                        <outlet property="loginButton" destination="iAd-Ov-O9b" id="sbm-0S-48m"/>
+                        <outlet property="passwordTextField" destination="BwV-2S-4IR" id="oqu-9y-e3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2F-q1-Cab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,10 +546,10 @@
             <point key="canvasLocation" x="1228.985507246377" y="100.44642857142857"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="18G-KQ-HcL"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
