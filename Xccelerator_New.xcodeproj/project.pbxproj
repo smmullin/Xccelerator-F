@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28C148FA4A3221E2F787927E /* Pods_Xccelerator_New.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8C20DB03A6D2A94F9AC7FE /* Pods_Xccelerator_New.framework */; };
+		7F428AF42820B53D008B61EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F428AF32820B53D008B61EF /* Constants.swift */; };
 		7FC860CA27F0F658006E8A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC860C927F0F658006E8A6D /* AppDelegate.swift */; };
 		7FC860CC27F0F658006E8A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC860CB27F0F658006E8A6D /* SceneDelegate.swift */; };
 		7FC860CE27F0F658006E8A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC860CD27F0F658006E8A6D /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		3D8C20DB03A6D2A94F9AC7FE /* Pods_Xccelerator_New.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xccelerator_New.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE27329D6DB64869F6412E2 /* Pods_Xccelerator_New_Xccelerator_NewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xccelerator_New_Xccelerator_NewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7452B479FA3BB6FAA14551B9 /* Pods_Xccelerator_NewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xccelerator_NewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F428AF32820B53D008B61EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FC860C627F0F658006E8A6D /* Xccelerator_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xccelerator_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC860C927F0F658006E8A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FC860CB27F0F658006E8A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				C77EA77F27F1160B003C672A /* LoginViewController.swift */,
 				7FC860FF27F223FB006E8A6D /* NewPostViewController.swift */,
 				7FC8610727F2619D006E8A6D /* APIFunctions.swift */,
+				7F428AF32820B53D008B61EF /* Constants.swift */,
 			);
 			path = Xccelerator_New;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77EA78027F1160B003C672A /* LoginViewController.swift in Sources */,
+				7F428AF42820B53D008B61EF /* Constants.swift in Sources */,
 				7FC860CE27F0F658006E8A6D /* ViewController.swift in Sources */,
 				7FC860CA27F0F658006E8A6D /* AppDelegate.swift in Sources */,
 				7FC8610027F223FB006E8A6D /* NewPostViewController.swift in Sources */,
